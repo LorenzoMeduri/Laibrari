@@ -1,0 +1,46 @@
+tProdotto
+	ISBN (PK)
+	Titolo
+	AnnoPubblicazione
+	Autore(FK)
+	CasaEditrice(FK)
+	isLibro(t/f)
+	AnnoRiferimento(Può essere NULL)
+tAutore
+	Id(PK)
+	Nome
+	Cognome
+tCasaEditrice
+	Id(PK)
+	Nome
+tCliente
+	CodiceFiscale(PK)
+	Nome
+	Cognome
+	Email
+	Password
+tTelefono
+	Cliente(FK)
+	Prefisso
+	Numero(PK)
+tAddetto
+	Id(PK)
+	Nome
+	Cognome
+	Email
+	Password
+tRichiesta
+	Id(PK)
+	Prodotto(FK)
+	Cliente(FK)
+	Data
+tAccettazione
+	Id(PK)
+	Richiesta(FK)
+	Addetto(FK)
+	Data
+tRestituzione
+	Id(PK)
+	Accettazione(FK)
+	Addetto(FK)
+	Data
