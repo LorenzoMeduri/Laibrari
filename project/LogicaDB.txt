@@ -6,6 +6,7 @@ tProdotto
 	CasaEditrice(FK)
 	isLibro(t/f)
 	AnnoRiferimento(Può essere NULL)
+	PathFoto
 tAutore
 	Id(PK)
 	Nome
