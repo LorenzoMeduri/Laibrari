@@ -1,3 +1,6 @@
+body {
+    background-color: rgb(103, 68, 68); 
+}
 header {
     display: flex;
     justify-content: space-between;
@@ -33,4 +36,38 @@ nav a:hover {
     position: relative;
     width: 300px;
     height: 50px;
+}
+form.submit {
+    max-width: 300px;
+    margin: 100px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form.submit h1 {
+    text-align: center;
+    color: #333333;
+}
+
+form.submit input[type="text"],
+form.submit input[type="password"],
+form.submit input[type="submit"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form.submit input[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+}
+
+form.submit input[type="submit"]:hover {
+    background-color: #45a049;
 }
