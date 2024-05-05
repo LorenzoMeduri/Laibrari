@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 05, 2024 at 10:43 PM
+-- Generation Time: May 05, 2024 at 11:02 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -130,8 +130,8 @@ CREATE TABLE `tRestituzione` (
 
 CREATE TABLE `tRichiesta` (
   `id` int(11) NOT NULL,
-  `Prodotto` varchar(11) NOT NULL,
-  `Cliente` varchar(11) NOT NULL,
+  `Prodotto` varchar(13) NOT NULL,
+  `Cliente` varchar(20) NOT NULL,
   `Data` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
@@ -144,7 +144,7 @@ CREATE TABLE `tRichiesta` (
 CREATE TABLE `tTelefono` (
   `Numero` int(9) NOT NULL,
   `Prefisso` int(3) NOT NULL DEFAULT 39,
-  `Cliente` varchar(11) NOT NULL
+  `Cliente` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
@@ -206,15 +206,15 @@ ALTER TABLE `tRestituzione`
 --
 ALTER TABLE `tRichiesta`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `Prodotto` (`Prodotto`),
-  ADD KEY `tRichiesta_ibfk_1` (`Cliente`);
+  ADD KEY `Cliente` (`Cliente`),
+  ADD KEY `Prodotto` (`Prodotto`);
 
 --
 -- Indexes for table `tTelefono`
 --
 ALTER TABLE `tTelefono`
   ADD PRIMARY KEY (`Numero`),
-  ADD KEY `tTelefono_ibfk_1` (`Cliente`);
+  ADD KEY `Cliente` (`Cliente`);
 
 --
 -- AUTO_INCREMENT for dumped tables
