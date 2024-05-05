@@ -13,9 +13,9 @@
         <h1> LOG IN </h1>
 
         <h4>Email:</h4>
-        <input id="email" type="text" name="email">
+        <input id="email" type="text">
         <h4>Password:</h4>
-        <input id="password" type="password" name="password">
+        <input id="password" type="password">
 
         <input type="submit" value="Log in">
 
