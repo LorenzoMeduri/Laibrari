@@ -7,7 +7,7 @@
     <title>Login</title>
     <?php session_start(); ?>
 </head>
-<header> <?php include("header.html"); ?> </header>
+<header> <?php include("header.php"); ?> </header>
 <body>
     <form id="form" class="submit">
         <h1> LOG IN </h1>

@@ -10,7 +10,14 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0RLgPIM87iDhK6rJww_Wb6VuIMXnjS_U"></script>
 </head>
-<header> <?php include("header.html"); ?> </header>
+<header> 
+    <?php 
+        if(!isset($_SESSION['auth']))
+            $_SESSION['auth'] = false;
+        
+        include("header.php"); 
+    ?> 
+</header>
 <body>
     <?php
         echo '<br>';

@@ -9,7 +9,7 @@
     
     echo $result['result'];
 
-    if($result == 1)
+    if($result['result'] == 1)
         $_SESSION['auth'] = true;
     else
         $_SESSION['auth'] = false;
