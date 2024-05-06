@@ -23,7 +23,7 @@
         <h4>Codice Fiscale:</h4>
         <input type="text" id="codiceFiscale">
         <h4>N. Telefono:</h4>
-        <input type="number" id="nTelefono">
+        <input type="text" maxlength="10" pattern="[0-9]" id="nTelefono">
 
         <input type="submit" value="Registrati">
 

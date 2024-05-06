@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 05, 2024 at 11:31 PM
+-- Generation Time: May 06, 2024 at 05:22 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -135,7 +135,7 @@ CREATE TABLE `tRichiesta` (
 --
 
 CREATE TABLE `tTelefono` (
-  `Numero` int(15) NOT NULL,
+  `Numero` int(10) NOT NULL,
   `Prefisso` int(3) NOT NULL DEFAULT 39,
   `Cliente` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
