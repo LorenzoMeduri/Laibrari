@@ -3,14 +3,14 @@
 
     include("../conn.php");
 
-    $sql = "SELECT EXISTS (SELECT NULL FROM tCliente WHERE Email = '".$_POST['email']."' AND Password = '".$_POST['password']."') AS result;";
+    $sql = 'SELECT CodiceFiscale FROM tCliente WHERE Email = "'.$_POST['email'].'" AND Password = "'.$_POST['password'].'"';
     $rec = mysqli_query($conn,$sql);
+    $num = mysqli_num_rows($rec);
     $result = mysqli_fetch_array($rec);
-    
-    echo $result['result'];
 
-    if($result['result'] == 1)
-        $_SESSION['auth'] = true;
-    else
-        $_SESSION['auth'] = false;
+    if($num != 0){
+        echo 1;
+        $_SESSION['auth'] = $result['CodiceFiscale'];
+    }else
+        echo 0;
 ?>

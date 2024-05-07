@@ -13,7 +13,7 @@
 <header> 
     <?php 
         if(!isset($_SESSION['auth']))
-            $_SESSION['auth'] = false;
+            $_SESSION['auth'] = 0;
         
         include("header.php"); 
     ?> 

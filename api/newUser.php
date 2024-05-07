@@ -12,5 +12,5 @@
     $sql = "INSERT INTO tTelefono (Numero, Cliente) VALUES (".$_POST['nTelefono'].", '".$_POST['codiceFiscale']."')";
     $rec = mysqli_query($conn,$sql);
 
-    $_SESSION['auth'] = true;
+    $_SESSION['auth'] = $_POST['codiceFiscale'];
 ?>

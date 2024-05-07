@@ -7,7 +7,7 @@
         <li><a href="prodotti.php">Prodotti</a></li>
         <li><a href="prenotazioni.php">Prenotazioni</a></li>
         <?php
-            if($_SESSION['auth'])
+            if($_SESSION['auth'] != 0)
                 echo '<li id="logout"><a href="#">Logout</a></li>';
             else
                 echo '<li><a href="login.php">Login</a></li>';
