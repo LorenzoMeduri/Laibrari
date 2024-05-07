@@ -71,3 +71,69 @@ form.submit input[type="submit"] {
 form.submit input[type="submit"]:hover {
     background-color: #45a049;
 }
+
+#elenco {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#product-box {
+    width: calc(30% - 20px);
+    height: 550px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    background-color: #f8f9fa;
+}
+
+#product-box .title {
+    margin: 0;
+    padding: 10px;
+    background-color: #4c71ba;
+    color: white;
+    border-radius: 8px 8px 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+#product-box img {
+    max-width: calc(100% - 40px);
+    max-height: calc(100% - 220px);
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    transition: transform 0.3s ease;
+}
+
+#product-box:hover img {
+    transform: scale(1.1);
+}
+
+#product-box button {
+    padding: 15px 40px;
+    background-color: #65cf3b;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 25px;
+    margin-top: 20px;
+    z-index: 1;
+}
+
+#titolo{
+    text-align: center;
+}
