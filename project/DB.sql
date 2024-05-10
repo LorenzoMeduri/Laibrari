@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 06, 2024 at 05:22 PM
+-- Generation Time: May 10, 2024 at 07:08 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -44,7 +44,7 @@ CREATE TABLE `tAddetto` (
   `id` int(11) NOT NULL,
   `Nome` varchar(15) NOT NULL,
   `Cognome` varchar(15) NOT NULL,
-  `Email` varchar(25) NOT NULL,
+  `Email` varchar(40) NOT NULL,
   `Password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
@@ -68,7 +68,7 @@ CREATE TABLE `tAutore` (
 
 CREATE TABLE `tCasaEditrice` (
   `id` int(11) NOT NULL,
-  `Nome` int(15) NOT NULL
+  `Nome` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- --------------------------------------------------------
@@ -81,7 +81,7 @@ CREATE TABLE `tCliente` (
   `CodiceFiscale` varchar(20) NOT NULL,
   `Nome` varchar(15) NOT NULL,
   `Cognome` varchar(15) NOT NULL,
-  `Email` varchar(25) NOT NULL,
+  `Email` varchar(40) NOT NULL,
   `Password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
