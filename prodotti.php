@@ -27,7 +27,7 @@
             while($array = mysqli_fetch_array($rec)){
                 echo '<div id="product-box">';
                     echo '<h1 id="titolo">'.$array['Titolo'].'</h1>';
-                    echo '<a href="prodotto.php?ISBN='.$array['ISBN'].'"><img src="'.$array['PathFoto'].'"></img></a>';
+                    echo '<a href="prodotto.php?ISBN='.$array['ISBN'].'"><img src="'.$array['PathFoto'].'"></a>';
                     echo '<button id="'.$array['ISBN'].'">PRENOTA</button>';
                 echo '</div>';
             }
