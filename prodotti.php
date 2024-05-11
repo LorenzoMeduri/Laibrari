@@ -11,11 +11,15 @@
 <body>
     <?php
         include("conn.php");
-        $sql = "SELECT * FROM tProdotto 
-        LEFT JOIN tRichiesta ON tProdotto.ISBN = tRichiesta.Prodotto 
-        LEFT JOIN tAccettazione ON tRichiesta.id = tAccettazione.Richiesta 
-        LEFT JOIN tRestituzione ON tAccettazione.id = tRestituzione.Accettazione 
-        WHERE tRichiesta.id IN (SELECT MAX(id) FROM tRichiesta) OR tRichiesta.id IS NULL;";
+        $sql = "SELECT tabellona.ISBN, tabellona.Titolo, tabellona.PathFoto
+        FROM
+        (
+        SELECT ROW_NUMBER() OVER (PARTITION BY tProdotto.ISBN ORDER BY tRichiesta.id DESC) AS NRiga, tProdotto.ISBN, tProdotto.Titolo, tProdotto.PathFoto, tRichiesta.id AS idRichiesta, tRestituzione.id AS idRestituzione
+            FROM tProdotto LEFT OUTER JOIN tRichiesta ON tProdotto.ISBN = tRichiesta.Prodotto
+                 LEFT OUTER JOIN tAccettazione ON tRichiesta.id = tAccettazione.Richiesta
+                 LEFT OUTER JOIN tRestituzione ON tAccettazione.id = tRestituzione.Accettazione
+        ) AS tabellona
+        WHERE (tabellona.idRichiesta IS NULL OR tabellona.idRestituzione IS NOT NULL) AND (NRiga = 1);";
 
         $rec = mysqli_query($conn,$sql);
 
