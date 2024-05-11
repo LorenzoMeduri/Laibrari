@@ -137,3 +137,38 @@ form.submit input[type="submit"]:hover {
 #titolo{
     text-align: center;
 }
+
+#prodotto {
+    position: absolute;
+    left: 300px;
+    top: 130px;
+    display: flex;
+}
+
+#imgProdotto {
+    display: inline-block;
+}
+
+#titoloLibro {
+    font-family: 'Playfair Display', serif;
+    font-size: 35px;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    text-shadow: 2px 2px 0 #000000;
+}
+
+#descrizioneLibro {
+    position: relative;
+    left: 45px;
+}
+
+#dettagliLibro {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+    line-height: 1.5;
+    
+}
