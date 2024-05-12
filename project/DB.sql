@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 11, 2024 at 02:02 PM
+-- Generation Time: May 12, 2024 at 02:59 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -97,9 +97,10 @@ CREATE TABLE `tProdotto` (
   `AnnoPubblicazione` int(4) NOT NULL,
   `Autore` int(11) NOT NULL,
   `CasaEditrice` int(11) NOT NULL,
+  `NPagine` int(4) NOT NULL,
+  `PathFoto` varchar(50) DEFAULT NULL,
   `isLibro` tinyint(1) NOT NULL DEFAULT 1,
-  `AnnoRiferimento` int(4) DEFAULT NULL,
-  `PathFoto` varchar(50) DEFAULT NULL
+  `AnnoRiferimento` int(4) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- --------------------------------------------------------
