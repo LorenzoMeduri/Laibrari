@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css"/> 
-    <title>Prenotazioni</title>
+    <title>Prodotto</title>
     <?php session_start(); ?>
 </head>
 <header> <?php include("header.php"); ?> </header>
@@ -20,7 +20,10 @@
         $array = mysqli_fetch_array($rec);
 
         echo '<div class="back-button">';
-            echo '<a href="prodotti.php"><img class="back-button-img" src="img/back-arrow.png"></a>';
+            if($_GET['flag'])
+                echo '<a href="prodotti.php"><img class="back-button-img" src="img/back-arrow.png"></a>';
+            else
+                echo '<a href="prenotazioni.php"><img class="back-button-img" src="img/back-arrow.png"></a>';
         echo '</div>';
 
         echo '<div id="prodotto">';
