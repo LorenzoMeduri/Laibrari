@@ -179,3 +179,17 @@ form.submit input[type="submit"]:hover {
     text-align: center; 
     color: #ffffff; 
 }
+
+.back-button {
+    position: absolute;
+    top: 120px;
+    left: 45px;
+    border: none;
+    padding: 15px 32px;
+}
+
+.back-button-img {
+    width: 140px; 
+    height: 95px; 
+    background-color: rgb(103, 68, 68);
+}

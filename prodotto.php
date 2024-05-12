@@ -19,6 +19,10 @@
         $rec = mysqli_query($conn,$sql);
         $array = mysqli_fetch_array($rec);
 
+        echo '<div class="back-button">';
+            echo '<a href="prodotti.php"><img class="back-button-img" src="img/back-arrow.png"></a>';
+        echo '</div>';
+
         echo '<div id="prodotto">';
             echo '<div id="imgProdotto">';
                 echo '<img src="'.$array['PathFoto'].'">';
