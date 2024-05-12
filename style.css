@@ -171,3 +171,11 @@ form.submit input[type="submit"]:hover {
     line-height: 1.5;
     
 }
+
+#libriNonDisponibili {
+    position: absolute;
+    left: 37%;
+    top: 140px;
+    text-align: center; 
+    color: #ffffff; 
+}
