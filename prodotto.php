@@ -11,7 +11,7 @@
 <body>
     <?php
         include("conn.php");
-        $sql = 'SELECT  Titolo, AnnoPubblicazione, PathFoto, NPagine, tCasaEditrice.Nome AS NomeCasaEditrice, tAutore.Nome AS NomeAutore, tAutore.Cognome AS CognomeAutore FROM tProdotto 
+        $sql = 'SELECT  Titolo, AnnoPubblicazione, PathFoto, NPagine, Descrizione, tCasaEditrice.Nome AS NomeCasaEditrice, tAutore.Nome AS NomeAutore, tAutore.Cognome AS CognomeAutore FROM tProdotto 
         INNER JOIN tAutore ON tProdotto.Autore = tAutore.id
         INNER JOIN tCasaEditrice ON tProdotto.CasaEditrice = tCasaEditrice.id
         WHERE ISBN = "'.$_GET['ISBN'].'"';
@@ -31,6 +31,7 @@
                     echo 'Anno di Pubblicazione: '.$array['AnnoPubblicazione'].'<br>';
                     echo 'Numero di Pagine: '.$array['NPagine'].'<br>';
                     echo 'Casa Editrice: '.$array['NomeCasaEditrice'].'<br>';
+                    echo '<br>'.$array['Descrizione'].'<br>';
                 echo '</p>';
         echo '</div>';
     ?>
