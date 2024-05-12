@@ -18,7 +18,7 @@
         }
 
         include("conn.php");
-        $sql = 'SELECT tProdotto.ISBN, tProdotto.Titolo, tProdotto.PathFoto, tAccettazione.id FROM tRichiesta 
+        $sql = 'SELECT DISTINCT tProdotto.ISBN, tProdotto.Titolo, tProdotto.PathFoto, tAccettazione.id FROM tRichiesta 
         INNER JOIN tProdotto ON tRichiesta.Prodotto = tProdotto.ISBN
         LEFT JOIN tAccettazione ON tRichiesta.id = tAccettazione.Richiesta 
         WHERE tRichiesta.Cliente = "'.$_SESSION['auth'].'";';
@@ -44,8 +44,5 @@
         }
     ?>
 </body>
-<script>
-    
-
-</script>
+<script src="eliminaPrenotazione.js"></script>
 </html>
