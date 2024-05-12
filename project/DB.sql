@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 12, 2024 at 02:59 PM
+-- Generation Time: May 12, 2024 at 03:55 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -98,6 +98,7 @@ CREATE TABLE `tProdotto` (
   `Autore` int(11) NOT NULL,
   `CasaEditrice` int(11) NOT NULL,
   `NPagine` int(4) NOT NULL,
+  `Descrizione` text NOT NULL,
   `PathFoto` varchar(50) DEFAULT NULL,
   `isLibro` tinyint(1) NOT NULL DEFAULT 1,
   `AnnoRiferimento` int(4) DEFAULT NULL
