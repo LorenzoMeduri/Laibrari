@@ -53,6 +53,7 @@ form.submit h1 {
 
 form.submit input[type="text"],
 form.submit input[type="password"],
+form.submit input[type="number"],
 form.submit input[type="submit"] {
     width: 100%;
     padding: 8px;
@@ -192,4 +193,8 @@ form.submit input[type="submit"]:hover {
     width: 140px; 
     height: 95px; 
     background-color: rgb(103, 68, 68);
+}
+
+#nTelefono {
+    appearance: textfield;
 }
