@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 13, 2024 at 09:31 PM
+-- Generation Time: May 13, 2024 at 11:50 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -20,6 +20,32 @@ SET time_zone = "+00:00";
 --
 -- Database: `MeduriBiblioteca`
 --
+
+DELIMITER $$
+--
+-- Procedures
+--
+CREATE DEFINER=`root`@`localhost` PROCEDURE `addPhone` (IN `Numero` BIGINT, `Cliente` VARCHAR(20))   BEGIN
+  INSERT INTO tTelefono (Numero, Cliente) 
+  VALUES (Numero,Cliente);
+END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `addPrenotazione` (IN `Prodotto` VARCHAR(13), `Cliente` VARCHAR(20))   BEGIN
+	INSERT into tRichiesta (Prodotto, Cliente, Data)
+    VALUES (Prodotto, Cliente, CURDATE());
+END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `addUser` (IN `CodiceFiscale` VARCHAR(20), IN `Nome` VARCHAR(15), IN `Cognome` VARCHAR(15), IN `Email` VARCHAR(40), IN `Password` VARCHAR(100))   BEGIN
+  INSERT INTO tCliente (CodiceFiscale, Nome, Cognome, Email, Password)
+  VALUES (CodiceFiscale, Nome, Cognome, Email, Password);
+END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `eliminaPrenotazione` (IN `ISBN` VARCHAR(13), `Cliente` VARCHAR(20))   BEGIN
+	DELETE FROM tRichiesta 
+    WHERE Prodotto = ISBN AND Cliente = Cliente;
+END$$
+
+DELIMITER ;
 
 -- --------------------------------------------------------
 

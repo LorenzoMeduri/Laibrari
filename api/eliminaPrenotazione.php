@@ -4,7 +4,7 @@
 
     include("../conn.php");
 
-    $sql = 'DELETE FROM tRichiesta WHERE Prodotto = "'.$_POST['isbn'].'" AND Cliente = "'.$_SESSION['auth'].'"';
+    $sql = 'CALL eliminaPrenotazione("'.$_POST['isbn'].'", "'.$_SESSION['auth'].'")';
     $rec = mysqli_query($conn,$sql);
 
     echo 1;
