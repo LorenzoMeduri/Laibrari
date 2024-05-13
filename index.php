@@ -24,5 +24,5 @@
         echo '<div id="mapDiv" style="height: 600px; width: 100%;"></div>';
     ?>
 </body>
-<script src="map.js"></script>
+<script src="scripts/map.js"></script>
 </html>

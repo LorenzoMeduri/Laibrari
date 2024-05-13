@@ -39,5 +39,5 @@
         }
     ?>
 </body>
-<script src="prenota.js"></script>
+<script src="scripts/prenota.js"></script>
 </html>

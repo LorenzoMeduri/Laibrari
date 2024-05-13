@@ -44,5 +44,5 @@
         }
     ?>
 </body>
-<script src="eliminaPrenotazione.js"></script>
+<script src="scripts/eliminaPrenotazione.js"></script>
 </html>
