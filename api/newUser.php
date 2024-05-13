@@ -5,7 +5,7 @@
     include("../conn.php");
 
     $sql = "INSERT INTO tCliente (CodiceFiscale, Nome, Cognome, Email, Password) 
-            VALUES ('".$_POST['codiceFiscale']."','".$_POST['nome']."','".$_POST['cognome']."','".$_POST['email']."','".$_POST['password']."')";
+            VALUES ('".$_POST['codiceFiscale']."','".$_POST['nome']."','".$_POST['cognome']."','".$_POST['email']."','".md5($_POST['password'])."')";
     
     $rec = mysqli_query($conn,$sql);
     

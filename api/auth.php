@@ -3,7 +3,7 @@
 
     include("../conn.php");
 
-    $sql = 'SELECT CodiceFiscale FROM tCliente WHERE Email = "'.$_POST['email'].'" AND Password = "'.$_POST['password'].'"';
+    $sql = 'SELECT CodiceFiscale FROM tCliente WHERE Email = "'.$_POST['email'].'" AND Password = "'.md5($_POST['password']).'"';
     $rec = mysqli_query($conn,$sql);
     $num = mysqli_num_rows($rec);
     $result = mysqli_fetch_array($rec);
