@@ -5,8 +5,12 @@
     <ul>
         <li><a href="./">Home</a></li>
         <li><a href="prodotti.php">Prodotti</a></li>
-        <li><a href="prenotazioni.php">Prenotazioni</a></li>
         <?php
+            if($_SESSION['auth'] == 1)
+                echo '<li><a href="richieste.php">Richieste</a></li>';
+            else
+                echo '<li><a href="prenotazioni.php">Prenotazioni</a></li>';
+
             if($_SESSION['auth'] != 0)
                 echo '<li id="logout"><a href="#">Logout</a></li>';
             else

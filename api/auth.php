@@ -11,6 +11,15 @@
     if($num != 0){
         echo 1;
         $_SESSION['auth'] = $result['CodiceFiscale'];
-    }else
-        echo 0;
+    }else{
+        $sql = 'SELECT EXISTS (SELECT NULL FROM tAddetto WHERE Email = "'.$_POST['email'].'" AND Password = "'.$_POST['password'].'") AS result;';
+        $rec = mysqli_query($conn,$sql);
+        $result = mysqli_fetch_array($rec);
+        if($result['result'] == 1){
+            $_SESSION['auth'] = 1;
+            echo 1;
+        }else{
+            echo 0;
+        }
+    }
 ?>
