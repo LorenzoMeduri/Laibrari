@@ -7,7 +7,7 @@
         <li><a href="prodotti.php">Prodotti</a></li>
         <?php
             if($_SESSION['auth'] == 1)
-                echo '<li><a href="richieste.php">Richieste</a></li>';
+                echo '<li id="richieste"><a href="richieste.php">Richieste</a></li>';
             else
                 echo '<li><a href="prenotazioni.php">Prenotazioni</a></li>';
 
