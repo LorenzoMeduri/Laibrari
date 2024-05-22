@@ -198,3 +198,13 @@ form.submit input[type="submit"]:hover {
 #nTelefono {
     appearance: textfield;
 }
+
+#infoPrenotante {
+    text-align: center;
+    top: 10px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    font-size: 18px;
+}

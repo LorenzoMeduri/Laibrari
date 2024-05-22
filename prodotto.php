@@ -22,8 +22,12 @@
         echo '<div class="back-button">';
             if($_GET['flag'])
                 echo '<a href="prodotti.php"><img class="back-button-img" src="img/back-arrow.png"></a>';
-            else
-                echo '<a href="prenotazioni.php"><img class="back-button-img" src="img/back-arrow.png"></a>';
+            else{
+                if($_SESSION['auth'] == 1)
+                    echo '<a href="richieste.php"><img class="back-button-img" src="img/back-arrow.png"></a>';
+                else
+                    echo '<a href="prodotti.php"><img class="back-button-img" src="img/back-arrow.png"></a>';
+            }
         echo '</div>';
 
         echo '<div id="prodotto">';
