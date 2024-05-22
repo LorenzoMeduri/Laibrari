@@ -1,9 +1,9 @@
 var buttons = document.querySelectorAll('#product-box button');
 buttons.forEach(function (button){
-    button.addEventListener('click', function() { prenota(button.id) });
+    button.addEventListener('click', function() { eliminaPrenotazione(button.id) });
 });
 
-function prenota(isbn){
+function eliminaPrenotazione(isbn){
     var parameter = "isbn=" + isbn;
 
     var xhr = new XMLHttpRequest();
