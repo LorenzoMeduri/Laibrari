@@ -19,7 +19,7 @@
 
         include("conn.php");
 
-        $sql = 'SELECT Nome, Cognome, ISBN, Titolo, PathFoto, idAccettazione, idRestituzione
+        $sql = 'SELECT id, Nome, Cognome, ISBN, Titolo, PathFoto, idAccettazione, idRestituzione
         FROM(
             SELECT ROW_NUMBER() OVER (PARTITION BY tProdotto.ISBN ORDER BY tRichiesta.id DESC) AS NRiga, tRichiesta.id, tCliente.Nome, tCliente.Cognome, tProdotto.ISBN, tProdotto.PathFoto, tProdotto.Titolo, tAccettazione.id AS idAccettazione, tRestituzione.id AS idRestituzione
                 FROM tRichiesta 
@@ -43,14 +43,14 @@
                         echo '';
                         echo '<a href="prodotto.php?ISBN='.$array['ISBN'].'&flag=0"><img src="'.$array['PathFoto'].'"></a>';
                         if($array['idAccettazione'] == NULL)
-                            echo '<button id="'.$array['ISBN'].'">ACCETTA</button>';
+                            echo '<div class="accetta" id="'.$array['id'].'"><button class="accetta" id="'.$array['id'].'">ACCETTA</button></div>';
                         else if($array['idAccettazione'] != NULL && $array['idRestituzione'] == NULL)
-                            echo '<button id="'.$array['ISBN'].'">RESTITUISCI</button>';
+                            echo '<div class="restituisci" id="'.$array['idAccettazione'].'"><button class="restituisci" id="'.$array['idAccettazione'].'">RESTITUISCI</button></div>';
                     echo '</div>';
                 }
             echo '</div>';
         }
     ?>
 </body>
-<script src="script/richieste.js"></script>
+<script src="scripts/richieste.js"></script>
 </html>
