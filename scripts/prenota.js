@@ -17,6 +17,8 @@ function prenota(isbn){
         }else if(this.responseText == 0){
             alert("Devi essere loggato per prenotare un prodotto");
             window.location.replace(window.location.href.split('/').slice(0, -1).join('/') + '/' + "login.php");
+        }else if(this.responseText == 2){
+            alert("Non puoi ordinare prodotti da addetto");
         }
     }
 

@@ -4,11 +4,14 @@
 
     include("../conn.php");
     
-    if($_SESSION['auth'] != 0){
+    if($_SESSION['auth'] != 0 && $_SESSION['auth'] != 1){
         $sql = 'CALL addPrenotazione("'.$_POST['isbn'].'", "'.$_SESSION['auth'].'")';
         $rec = mysqli_query($conn,$sql);
         
         echo 1;
-    }else
-        echo 0;
+    }else if($_SESSION['auth'] == 1){
+            echo 2;
+        }else{
+            echo 0;
+        }
 ?>
